@@ -164,7 +164,7 @@
 				surfaceNoiseColor.a *= surfaceNoise;
 
 				// Use normal alpha blending to combine the foam with the surface.
-				return alphaBlend(surfaceNoiseColor, waterColor);
+				return alphaBlend(surfaceNoiseColor, waterColor);               
             }
             ENDCG
         }
