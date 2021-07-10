@@ -8,9 +8,12 @@ using System.Collections;
 
 public class BoatController : MonoBehaviour
 {
+    public static BoatController instance;
     [Header("General:")]
     public Transform visual;
     public GameObject playerVisual;
+    public GameObject paddle;
+    public GameObject fishingRod;
 
     [Header("Fishing: ")]
     public ResourceStack resourceStack;
@@ -49,7 +52,10 @@ public class BoatController : MonoBehaviour
     public Color green;
     public Color red;
     public Window_QuestPointer questPointer;
-
+    private void Awake()
+    {
+        instance = this;
+    }
     void Start()
     {
         originalY = this.transform.position.y;
@@ -57,6 +63,9 @@ public class BoatController : MonoBehaviour
         progressFill = progressBar.transform.GetChild(0).GetComponent<Image>();
         currentFishText.text = currentFishCount.ToString();
         maxFishText.text = " / " + maxFishCount.ToString();
+
+        paddle.SetActive(true);
+        fishingRod.SetActive(false);
     }
 
     void Update()
@@ -64,7 +73,16 @@ public class BoatController : MonoBehaviour
         SimulateBoatMovement();      
         if (isFishing) CatchFish();       
         ui.transform.LookAt(Camera.main.transform);
-        questPointer.Show(fishStoreTarget.position);
+
+        if (GameManager.instance.boatMode && !isFishing)
+        {
+            playerVisual.GetComponent<Animator>().SetBool("paddle", true);
+        }
+        else if(isFishing)
+        {
+            playerVisual.GetComponent<Animator>().SetBool("paddle", false);
+        }
+        //questPointer.Show(fishStoreTarget.position);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -122,7 +140,11 @@ public class BoatController : MonoBehaviour
     {
         if (!isFishing)
         {
+            //playerVisual.transform.DOLookAt(gameObject.transform.position,0.2f);
+            paddle.SetActive(false);
+            fishingRod.SetActive(true);
             isFishing = true;
+            playerVisual.GetComponent<Animator>().SetTrigger("fishing");
             done = false;
             
             if (currentFishCount < maxFishCount)
@@ -158,9 +180,13 @@ public class BoatController : MonoBehaviour
             {
                 done = true;
                 isFishing = false;
+                //paddle.SetActive(true);
+                //fishingRod.SetActive(false);
                 progressBar.gameObject.SetActive(false);
                 detector.SetActive(false);
-                if(closestFish) closestFish.HookFish(resourceStack);
+                
+
+                if (closestFish) closestFish.HookFish(resourceStack);
                 currentTime = 0f;
             }
         }

@@ -139,7 +139,7 @@ public class GameManager : MonoBehaviour, ISerializationCallbackReceiver
     public static string woodCounterKey = "WoodCounterKey";
     public static int botType = 0;
 
-
+    public bool boatMode;
 
     private void Awake()
     {
@@ -206,14 +206,14 @@ public class GameManager : MonoBehaviour, ISerializationCallbackReceiver
 
         CheckBaseStatus();
 
-        if (TagManager.IsPetActivated())
-        {
-            petObject.SetActive(true);
-        }
-        else
-        {
-            petObject.SetActive(false);
-        }
+        //if (TagManager.IsPetActivated())
+        //{
+        //    petObject.SetActive(true);
+        //}
+        //else
+        //{
+        //    petObject.SetActive(false);
+        //}
     }
     private void FixedUpdate()
     {
@@ -244,6 +244,7 @@ public class GameManager : MonoBehaviour, ISerializationCallbackReceiver
                 player.transform.position = new Vector3(-8f, player.transform.position.y, -75f);
                 player.SetActive(true);
                 cameraCon.GetComponent<CameraController>().target = player.transform;
+                boatMode = false;
                 break;
             case ControlType.Boat:
                 player.GetComponent<PlayerInputController>().enabled = false;
@@ -253,6 +254,7 @@ public class GameManager : MonoBehaviour, ISerializationCallbackReceiver
                 boat.GetComponent<BoatController>().storeIndicator.SetActive(true);
                 boat.SetActive(true);
                 cameraCon.GetComponent<CameraController>().target = boat.transform;
+                boatMode = true;
                 break;
             default:
                 break;

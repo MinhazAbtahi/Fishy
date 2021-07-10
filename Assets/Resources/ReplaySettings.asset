@@ -150,6 +150,78 @@ MonoBehaviour:
     positiveButton: escape
     altNegativeButton: 
     altPositiveButton: joystick button 1
+  - name: Enable Debug Button 1
+    value: 0
+    negativeButton: 
+    positiveButton: left ctrl
+    altNegativeButton: 
+    altPositiveButton: joystick button 8
+  - name: Enable Debug Button 2
+    value: 0
+    negativeButton: 
+    positiveButton: backspace
+    altNegativeButton: 
+    altPositiveButton: joystick button 9
+  - name: Debug Reset
+    value: 0
+    negativeButton: 
+    positiveButton: left alt
+    altNegativeButton: 
+    altPositiveButton: joystick button 1
+  - name: Debug Next
+    value: 0
+    negativeButton: 
+    positiveButton: page down
+    altNegativeButton: 
+    altPositiveButton: joystick button 5
+  - name: Debug Previous
+    value: 0
+    negativeButton: 
+    positiveButton: page up
+    altNegativeButton: 
+    altPositiveButton: joystick button 4
+  - name: Debug Validate
+    value: 0
+    negativeButton: 
+    positiveButton: return
+    altNegativeButton: 
+    altPositiveButton: joystick button 0
+  - name: Debug Persistent
+    value: 0
+    negativeButton: 
+    positiveButton: right shift
+    altNegativeButton: 
+    altPositiveButton: joystick button 2
+  - name: Debug Multiplier
+    value: 0
+    negativeButton: 
+    positiveButton: left shift
+    altNegativeButton: 
+    altPositiveButton: joystick button 3
+  - name: Debug Horizontal
+    value: 0
+    negativeButton: left
+    positiveButton: right
+    altNegativeButton: 
+    altPositiveButton: 
+  - name: Debug Vertical
+    value: 0
+    negativeButton: down
+    positiveButton: up
+    altNegativeButton: 
+    altPositiveButton: 
+  - name: Debug Vertical
+    value: 0
+    negativeButton: down
+    positiveButton: up
+    altNegativeButton: 
+    altPositiveButton: 
+  - name: Debug Horizontal
+    value: 0
+    negativeButton: left
+    positiveButton: right
+    altNegativeButton: 
+    altPositiveButton: 
   videoCodec: 0
   removeScreenshotsAlpha: 1
   version: 2.6.6

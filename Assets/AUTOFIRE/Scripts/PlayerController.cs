@@ -141,6 +141,7 @@ public class PlayerController : MonoBehaviour
         }
         //closestWood = NearbyWood();
 
+
     }
 
     private void OnDrawGizmos()

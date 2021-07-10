@@ -30,10 +30,14 @@ public class NPC : MonoBehaviour
         Vector3 stackPos = resourceStack.transform.position;
         GameObject fxClone = Instantiate(deathFx, transform.position, Quaternion.identity);
         transform.DORotate(new Vector3(-90f, transform.position.y, transform.position.z), .1f);
-        transform.DOMoveY(stackPos.y + 4f, .2f).OnComplete(() =>
+        
+        transform.DOMoveY(stackPos.y + 4f, 1f).OnComplete(() =>
         {
+            //BoatController.instance.playerVisual.transform.DORotateQuaternion(Quaternion.Euler(Vector3.zero), 0.2f);
+            BoatController.instance.paddle.SetActive(true);
+            BoatController.instance.fishingRod.SetActive(false);
             transform.DORotate(new Vector3(90f, transform.position.y, transform.position.z), .1f);
-            transform.DOMove(stackPos, .2f).OnComplete(() => Die());
+            transform.DOMove(stackPos, 1f).OnComplete(() => Die());
             resourceStack.FillStack();
         });
     }
