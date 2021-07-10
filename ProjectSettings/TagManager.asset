@@ -1,0 +1,74 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - ground
+  - bot
+  - bullet
+  - targetBot
+  - enemyProjectile
+  - PlayerShark
+  - botDead
+  - enemySniperProjectile
+  - playerShield
+  - playerShieldPickup
+  - TripleShootPickup
+  - levelendportal
+  - playerHealthPickup
+  - coin
+  - Wall
+  - Bridge
+  - Coin
+  - bomb
+  - treetop
+  - treeWood
+  - pickupWood
+  - triggerZone
+  - metalSource
+  - pickupMetal
+  - Canvas
+  - water
+  - levelStartPortal
+  - NPC
+  - Boat
+  - Port
+  - FishStore
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - Ground
+  - enemyProjectile
+  - PlayerShootRadius
+  - enemyDead
+  - Player
+  - PlayerShield
+  - PlayerBullet
+  - PlayerBulletShell
+  - TripleShootPickup
+  - endPortal
+  - HealthPickup
+  - Coin
+  - treetop
+  - tree
+  - pickupWood
+  - bot
+  - axeArea
+  - buildingTriggerZone
+  - WaterDeath
+  - BoatRadius
+  - PortRadius
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0

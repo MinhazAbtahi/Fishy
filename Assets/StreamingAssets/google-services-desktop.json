@@ -1,0 +1,87 @@
+{
+  "project_info": {
+    "project_number": "220065665470",
+    "firebase_url": "https://dragvillage-funvai.firebaseio.com",
+    "project_id": "dragvillage-funvai",
+    "storage_bucket": "dragvillage-funvai.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:220065665470:android:6fdb26e610200b36c2a9ef",
+        "android_client_info": {
+          "package_name": "com.funvai.dragonvillage"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "220065665470-pk9egped1u2433l92pietl79b0vc4u21.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCI22hWL5WBVtlivS9A3BCzatuUT_TGj8U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "220065665470-pk9egped1u2433l92pietl79b0vc4u21.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "220065665470-5qph31nqe5ivot1nrpvrkn4i93vn999a.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.fpg.tapfire",
+                "app_store_id": "1553468450"
+              }
+            }
+          ]
+        }
+      },
+      "admob_app_id": "ca-app-pub-1321152238052980~7704747001"
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:220065665470:android:3144d86ba8aff7b4c2a9ef",
+        "android_client_info": {
+          "package_name": "com.funvai.tapfire"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "220065665470-pk9egped1u2433l92pietl79b0vc4u21.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCI22hWL5WBVtlivS9A3BCzatuUT_TGj8U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "220065665470-pk9egped1u2433l92pietl79b0vc4u21.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "220065665470-5qph31nqe5ivot1nrpvrkn4i93vn999a.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.fpg.tapfire",
+                "app_store_id": "1553468450"
+              }
+            }
+          ]
+        }
+      },
+      "admob_app_id": "ca-app-pub-1321152238052980~5174700200"
+    }
+  ],
+  "configuration_version": "1"
+}
